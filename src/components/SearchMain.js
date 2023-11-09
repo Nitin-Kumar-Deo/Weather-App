@@ -9,7 +9,7 @@ function SearchMain() {
     const getWeatherInfo = async ()=>{
       try{
           let apiKey=process.env.API_KEY;
-        let url= `https://api.openweathermap.org/data/2.5/weather?q=${searchTerm}&units=metric&appid={apiKey}`;
+        let url= `https://api.openweathermap.org/data/2.5/weather?q=${searchTerm}&units=metric&appid=${apiKey}`;
         const res= await fetch(url);
         const data =await res.json()
         
